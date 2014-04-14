@@ -1,0 +1,16 @@
+{% extends "testBlogBundle::layout.html.twig" %}
+
+{% block title %}
+  Ajouter un article - {{ parent() }}
+{% endblock %}
+{% block testblog_body %}
+  <h2>Modifier un article</h2>
+  {% include "testBlogBundle:Blog:formulaire.html.twig" %}
+
+  <p>
+    <a href="{{ path('testblog_accueil')}}" class="btn">
+      <i class="icon-chevron-left"></i>
+      Retour à l'accueil
+    </a>
+  </p>
+{% endblock %}

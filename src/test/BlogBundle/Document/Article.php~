@@ -1,0 +1,38 @@
+<?php
+
+namespace test\BlogBundle\Document;
+use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
+
+
+/**
+* @MongoDB\Document
+*/
+class Article
+{
+  /**
+  * @MongoDB\Id
+  */
+  protected $id;
+  
+  /**
+  * @MongoDB\Date
+  */
+  protected $date;
+  
+  /**
+  * @MongoDB\String
+  */
+  protected $titre;
+  
+  /**
+  * @MongoDB\String
+  */
+  protected $auteur;
+  
+  /**
+  * @MongoDB\String
+  */
+  protected $contenu;	
+  
+  
+}

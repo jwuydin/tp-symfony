@@ -1,0 +1,23 @@
+testblog_accueil:
+    path:      /{page}
+    defaults:  { _controller: testBlogBundle:Blog:index, page: 1 } 
+    requirements:
+        page: \d*
+testblog_voir:
+    path:      /article/{id}
+    defaults:  { _controller: testBlogBundle:Blog:voir }
+testblogvoir_slug:
+    path: /{annee}/{slug}.{format}
+    defaults: { _controller: testBlogBundle:Blog:voirSlug, format: html}
+    requirements:
+        annee: \d{4}
+        format: html|xml
+testblog_ajouter:
+    path:      /ajouter
+    defaults:  { _controller: testBlogBundle:Blog:ajouter }
+testblog_modifier:
+    path: /modifier/{id}
+    defaults: { _controller: testBlogBundle:Blog:modifier }
+testblog_supprimer:
+    path: /supprimer/{id}
+    defaults: { _controller: testBlogBundle:Blog:supprimer }

@@ -1,0 +1,7 @@
+acme_store:
+    resource: "@AcmeStoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+test_blog:
+    resource: "@testBlogBundle/Resources/config/routing.yml"
+    prefix:   /blog
